@@ -58,7 +58,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
             src={imageUrl}
             alt={product?.thumbnail?.label || product?.name || "thumbnail"}
             fill
-            sizes="(max-width: 600px) calc(50vw - 16px), (max-width: 1200px) calc(33vw - 16px), 500px"
+            sizes="(max-width: 600px) calc(50vw - 16px), calc((100vw - 48px) / 3)"
             style={{
               objectFit: "contain",
               filter: "brightness(1.03)",
