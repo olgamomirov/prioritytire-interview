@@ -1,0 +1,24 @@
+query CategoriesSlug {
+  categories {
+    items {
+      name
+      url_key
+      level
+      children {
+        name
+        url_key
+        level
+        children {
+          name
+          url_key
+          level
+          children {
+            name
+            url_key
+            level
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+query ProductDetail($filter: ProductAttributeFilterInput) {
+  products(filter: $filter) {
+    items {
+      name
+      meta_title
+      meta_description
+      media_gallery {
+        url
+        label
+      }
+      thumbnail {
+        label
+        url
+      }
+      uid
+      url_key
+      categories {
+        name
+      }
+      price_range {
+        minimum_price {
+          regular_price {
+            value
+            currency
+          }
+          final_price {
+            currency
+            value
+          }
+        }
+      }
+      ... on ConfigurableProduct {
+        configurable_options {
+          label
+          values {
+            label
+            swatch_data {
+              value
+              ... on ImageSwatchData {
+                thumbnail
+              }
+            }
+          }
+        }
+      }
+      description {
+        html
+      }
+      short_description {
+        html
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+query RecommendedProducts($filter: ProductAttributeFilterInput) {
+  products(filter: $filter) {
+    items {
+      name
+      url_key
+      price_range {
+        minimum_price {
+          regular_price {
+            value
+            currency
+          }
+          final_price {
+            value
+            currency
+          }
+        }
+      }
+      thumbnail {
+        url
+        label
+      }
+    }
+  }
+}

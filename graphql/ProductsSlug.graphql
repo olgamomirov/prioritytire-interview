@@ -1,0 +1,7 @@
+query ProductsSlug($pageSize: Int, $filter: ProductAttributeFilterInput) {
+  products(pageSize: $pageSize, filter: $filter) {
+    items {
+      url_key
+    }
+  }
+}
